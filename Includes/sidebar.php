@@ -15,20 +15,30 @@
 </script>
 
 <div id="mySidenav" class="sidenav">
-  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
   <a href="#" id="profile_link">Profile</a>
   <a href="#">Order History</a>
   <a href="#">Suggestions</a>
   <a href="#">Change Credentials</a>
   <a href="#">PerDay Average</a>
+  <a href="#">User Log</a>
 </div>
 
 
 <script>
+
 function openNav() {
-  document.getElementById("mySidenav").style.width = "220px";
-  document.getElementById("maincontent").style.marginLeft = "220px";
+  if(document.getElementById("mySidenav").style.width == "220px")
+  {
+    document.getElementById("mySidenav").style.width = "0";
+    document.getElementById("maincontent").style.marginLeft= "0";
+  }
+  else
+  {
+    document.getElementById("mySidenav").style.width = "220px";
+    document.getElementById("maincontent").style.marginLeft = "220px";
+  }
 }
+
 function closeNav() {
   document.getElementById("mySidenav").style.width = "0";
   document.getElementById("maincontent").style.marginLeft= "0";

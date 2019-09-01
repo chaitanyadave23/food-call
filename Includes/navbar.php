@@ -20,32 +20,60 @@ body {
 
 .header {
   overflow: hidden;
-  background-color: #f1f1f1;
-  padding: 20px 10px;
+  /* padding: 20px 10px; */
+  background-color :#fc8019;
+  height:60px;
 }
 
-.header a {
+.a {
   float: left;
-  color: black;
   text-align: center;
-  padding: 12px;
+  padding: 1.5px;
+  margin:  10 px;
+  margin-top:14px;
+  margin-right:10px;
   text-decoration: none;
   font-size: 18px; 
   line-height: 25px;
   border-radius: 4px;
+  color :white;
+  background-color :#fc8019;
+}
+.btn
+{
+  float: left;
+  text-align: center;
+  padding-right: 5 px;
+  padding-left: 5 px;
+  margin:  10 px;
+  margin-top:11px;
+  margin-right:10px;
+  text-decoration: none;
+  font-size: 18px; 
+  line-height: 23px;
+  color :white;
+  background-color :#fc8019;
+  border: 2px solid #e06806;
+  border-radius: 5px;
 }
 
-.header a.logo {
-  font-size: 25px;
-  font-weight: bold;
-}
-
-.header a:hover {
-  background-color: #ddd;
+.btn:hover {
+  background-color: #fc8f36;
   color: black;
+  text-decoration: none;
 }
 
-.header a.active {
+.logo {
+  margin-left:50px;
+}
+
+.a:hover {
+  background-color:#fc8f36;
+  color: black;
+  text-decoration: none;
+}
+
+.a.active {
   background-color: dodgerblue;
   color: white;
 }
@@ -55,7 +83,7 @@ body {
 }
 
 @media screen and (max-width: 500px) {
-  .header a {
+  .a {
     float: none;
     display: block;
     text-align: left;
@@ -65,19 +93,87 @@ body {
     float: none;
   }
 }
+
+/* body { padding: 2em; } */
+
+
+/* Shared */
+.loginBtn {
+  box-sizing: border-box;
+  position: relative;
+  /* width: 13em;  - apply for fixed size */
+  margin: 0.2em;
+  padding: 0 15px 0 46px;
+  border: none;
+  text-align: left;
+  line-height: 34px;
+  white-space: nowrap;
+  border-radius: 0.2em;
+  font-size: 16px;
+  color: #FFF;
+}
+.loginBtn:before {
+  content: "";
+  box-sizing: border-box;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 34px;
+  height: 100%;
+}
+.loginBtn:focus {
+  outline: none;
+}
+.loginBtn:active {
+  box-shadow: inset 0 0 0 32px rgba(0,0,0,0.1);
+}
+
+
+/* Facebook */
+.loginBtn--facebook {
+  background-color: #4C69BA;
+  background-image: linear-gradient(#4C69BA, #3B55A0);
+  /*font-family: "Helvetica neue", Helvetica Neue, Helvetica, Arial, sans-serif;*/
+  text-shadow: 0 -1px 0 #354C8C;
+}
+.loginBtn--facebook:before {
+  border-right: #364e92 1px solid;
+  background: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/14082/icon_facebook.png') 6px 6px no-repeat;
+}
+.loginBtn--facebook:hover,
+.loginBtn--facebook:focus {
+  background-color: #5B7BD5;
+  background-image: linear-gradient(#5B7BD5, #4864B1);
+}
+
+
+/* Google */
+.loginBtn--google {
+  /*font-family: "Roboto", Roboto, arial, sans-serif;*/
+  background: #DD4B39;
+}
+.loginBtn--google:before {
+  border-right: #BB3F30 1px solid;
+  background: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/14082/icon_google.png') 6px 6px no-repeat;
+}
+.loginBtn--google:hover,
+.loginBtn--google:focus {
+  background: #E74B37;
+}
 </style>
 </head>
 <body>
 
 <div class="header">
-  <a href="#default" class="logo">CompanyLogo</a>
+  <a img href="#default" class="logo"><img alt="Food Call" src="Images\logo.jpg" width=60 height=60></a>
+
   <div class="header-right">
-   <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">
+  <button type="button" class="btn" data-toggle="modal" data-target="#exampleModalCenter">
   	Launch demo modal
 	</button>
-    <a href="#home">Sign Up</a>
-    <a href="#contact">Contact</a>
-    <a href="#about">About</a>
+    <a class ="a" href="#home">Sign Up</a>
+    <a class ="a" href="#contact">Contact</a>
+    <a class ="a" href="#about">About</a>
   </div>
 </div>
 
@@ -88,22 +184,36 @@ body {
 <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered" role="document">
     <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalCenterTitle">Sign up or log in to Food Call</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+    <button type="button" class="close" style="float:right;display:inline;" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
+    </button>
+    <center>
+    <div style="text-size:40px;" id="modal-header"><b>Sign up or log in to FoodCall</b></div>
+    </center>
+      <div class="modal-header">
+      <button class="loginBtn loginBtn--facebook">
+          Login with Facebook
+        </button>
+
+        <button class="loginBtn loginBtn--google">
+          Login with Google
         </button>
       </div>
+      <!-- <div class="ui horizontal divider">
+            or
+      </div> -->
+
+      <div class="modal-footer">
       <div class="modal-body">
-        <form action="" method="post">
+      <form action="" method="post">
 		  <div class="form-group">
-		    <label for="exampleInputEmail1">Email address</label>
-		    <input type="email" name="username" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+		    <label for="exampleInputEmail1"style="text-size:40px;"><b>Email address</b></label>
+		    <input type="email" style="height:60px;" name="username" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
 		    
 		  </div>
 		  <div class="form-group">
-		    <label for="exampleInputPassword1">Password</label>
-		    <input type="password" name="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+		    <label for="exampleInputPassword1"style="text-size:40px;"><b>Password</b></label>
+		    <input type="password"  style="height:60px;" name="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
 		  </div>
 		  <div class="form-group form-check">
 		    <input type="checkbox" class="form-check-input" id="exampleCheck1">
@@ -111,8 +221,6 @@ body {
 		  </div>
 		  <button type="submit" name="login" class="btn btn-primary">Submit</button>
 		</form>
-      </div>
-      <div class="modal-footer">
        </div>
     </div>
   </div>

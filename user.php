@@ -8,9 +8,7 @@
 </head>
 <body>
 	<div id="maincontent">
-		 dfjl;ks;ddfjsddfjpo
 		  	<div id="profile">
-		  		
 		  	</div>		  			  			  
 	</div>
 
