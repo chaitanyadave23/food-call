@@ -1,9 +1,18 @@
+<?php include('includes\header.php') ?>
+<?php include('includes\sidebar.php') ?>
+
 <!DOCTYPE html>
 <html>
 <head>
-  <title></title>
+  <title>Order Here</title>
 </head>
 <body>
-  hello
+	<div id="maincontent">
+		 dfjl;ks;ddfjsddfjpo
+		  	<div id="profile">
+		  		
+		  	</div>		  			  			  
+	</div>
+
 </body>
 </html>
