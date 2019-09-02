@@ -9,101 +9,63 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
-
-<style>
-* {box-sizing: border-box;}
-
-body { 
-  margin: 0;
-  font-family: Arial, Helvetica, sans-serif;
-}
-
-.header {
-  overflow: hidden;
-  background-color: #f1f1f1;
-  padding: 20px 10px;
-}
-
-.header a {
-  float: left;
-  color: black;
-  text-align: center;
-  padding: 12px;
-  text-decoration: none;
-  font-size: 18px; 
-  line-height: 25px;
-  border-radius: 4px;
-}
-
-.header a.logo {
-  font-size: 25px;
-  font-weight: bold;
-}
-
-.header a:hover {
-  background-color: #ddd;
-  color: black;
-}
-
-.header a.active {
-  background-color: dodgerblue;
-  color: white;
-}
-
-.header-right {
-  float: right;
-}
-
-@media screen and (max-width: 500px) {
-  .header a {
-    float: none;
-    display: block;
-    text-align: left;
-  }
-  
-  .header-right {
-    float: none;
-  }
-}
-</style>
+    <link rel="stylesheet" href="css\navbar.css" type="text/css">
 </head>
 <body>
 
 <div class="header">
-  <a href="#default" class="logo">CompanyLogo</a>
+  <a img href="#default" class="logo"><img alt="Food Call" src="Images\logo.jpg" width=60 height=60></a>
+
   <div class="header-right">
-   <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">
-  	Launch demo modal
+  <button type="button" class="btn" data-toggle="modal" data-target="#login">
+  	Login
 	</button>
-    <a href="#home">Sign Up</a>
-    <a href="#contact">Contact</a>
-    <a href="#about">About</a>
+  <button type="button" class="btn" data-toggle="modal" data-target="#signup">
+    Sign Up
+  </button>
+    <a class ="a" href="#home">Sign Up</a>
+    <a class ="a" href="#home">Sign Up</a>
+   
   </div>
 </div>
 
 <!-- Button trigger modal -->
 
 
-<!-- Modal -->
-<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+<!--Login Modal -->
+<div class="modal fade" id="login" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered" role="document">
     <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalCenterTitle">Sign up or log in to Food Call</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+    <button type="button" class="close" style="float:right;display:inline;" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
+    </button>
+    <center>
+    <div style="text-size:40px;" id="modal-header"><b>Sign up or log in to FoodCall</b></div>
+    </center>
+      <div class="modal-header">
+      <button class="loginBtn loginBtn--facebook">
+          Login with Facebook
+        </button>
+
+        <button class="loginBtn loginBtn--google">
+          Login with Google
         </button>
       </div>
+      <!-- <div class="ui horizontal divider">
+            or
+      </div> -->
+
+      <div class="modal-footer">
       <div class="modal-body">
-        <form action="" method="post">
+      <form action="" method="post">
 		  <div class="form-group">
-		    <label for="exampleInputEmail1">Email address</label>
-		    <input type="email" name="username" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+		    <label for="exampleInputEmail1"style="text-size:40px;"><b>Email address</b></label>
+		    <input type="email" style="height:60px;" name="username" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
 		    
 		  </div>
 		  <div class="form-group">
-		    <label for="exampleInputPassword1">Password</label>
-		    <input type="password" name="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+		    <label for="exampleInputPassword1"style="text-size:40px;"><b>Password</b></label>
+		    <input type="password"  style="height:60px;" name="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
 		  </div>
 		  <div class="form-group form-check">
 		    <input type="checkbox" class="form-check-input" id="exampleCheck1">
@@ -111,12 +73,14 @@ body {
 		  </div>
 		  <button type="submit" name="login" class="btn btn-primary">Submit</button>
 		</form>
-      </div>
-      <div class="modal-footer">
        </div>
     </div>
   </div>
 </div>
+</div>
+
+ 
+
 
 
 
