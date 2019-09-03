@@ -35,9 +35,8 @@
 		}
 		?>	
 
-		<div id="cart">
-			<h4>Your orders</h4>
-		</div>	
+			<div id="cart">Your Orders</div>
+			</div>
 
 		<script>
 			var na;
@@ -45,9 +44,12 @@
 			function add(element){
 				iter=element.value;
 				na = document.getElementById(iter).textContent;
-				//console.log(na+"hggbygb");
-				document.getElementById("cart").innerHTML=na;
+				// document.getElementById("cart").innerHTML=na;
 
+				var node = document.createElement("p");                 
+				var textnode = document.createTextNode(na);         
+				node.appendChild(textnode);                         
+				document.getElementById("cart").appendChild(node);
 			}
 		</script>
 </body>
