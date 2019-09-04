@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script> -->
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link href="css\sidebar.css" type="text/css" rel="stylesheet">
+  <link href="CSS\sidebar.css" type="text/css" rel="stylesheet">
 </head>
 <body>  
 <script type="text/javascript">
@@ -12,8 +12,8 @@
          $("#profile").load("index.php");
      });
   });
-</script>
 
+</script>
 <div id="mySidenav" class="sidenav">
   <a href="#" id="profile_link">Profile</a>
   <a href="#">Order History</a>
@@ -22,20 +22,18 @@
   <a href="#">PerDay Average</a>
   <a href="#">User Log</a>
 </div>
-
-
 <script>
 
 function openNav() {
-  if(document.getElementById("mySidenav").style.width == "220px")
+  if(document.getElementById("mySidenav").style.width == "165px")
   {
     document.getElementById("mySidenav").style.width = "0";
-    document.getElementById("maincontent").style.marginLeft= "0";
+    document.getElementById("maincontent").style.marginLeft = "0";
   }
   else
   {
-    document.getElementById("mySidenav").style.width = "220px";
-    document.getElementById("maincontent").style.marginLeft = "220px";
+    document.getElementById("mySidenav").style.width = "165px";
+    document.getElementById("maincontent").style.marginLeft = "165px";
   }
 }
 

@@ -7,7 +7,7 @@
   <title>Order Here</title>
   <link rel="stylesheet" href="css/card.css">
   <link rel="stylesheet" href="css/button.css">
-  <link rel="stylesheet" href="css/cart.css">
+  <link rel="stylesheet" href="CSS/cart.css">
 </head>
 <body>
 	<div id="maincontent">

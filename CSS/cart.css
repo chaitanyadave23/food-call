@@ -4,12 +4,13 @@
   	right: 16px;
   	padding:10px;
   	text-align: :center;
-  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.5);
-  /*transition: 0.3s;*/
-  width: 22%;
-  height: 70%;
-/*  float:right;*/
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.5);
+    /*transition: 0.3s;*/
+    width: 22%;
+    height: 70%;
+    /*  float:right;*/
 }
+
 
 #cart:hover {
   box-shadow: 0 10px 18px 0 rgba(0,0,0,0.5);
