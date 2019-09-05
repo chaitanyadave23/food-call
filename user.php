@@ -5,8 +5,8 @@
 <html>
 <head>
   <title>Order Here</title>
-  <link rel="stylesheet" href="css/card.css">
-  <link rel="stylesheet" href="css/button.css">
+  <link rel="stylesheet" href="CSS/card.css">
+  <link rel="stylesheet" href="CSS/button.css">
   <link rel="stylesheet" href="CSS/cart.css">
 </head>
 <body>

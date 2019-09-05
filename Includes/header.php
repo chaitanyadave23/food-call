@@ -6,7 +6,7 @@
 </head>
 <body>
 
-<div class="header">
+<div class="header" id="my Header">
   <span style="font-size:30px;cursor:pointer;" onclick="openNav()">&#9776;</span>
   
   <div class="header-right">
