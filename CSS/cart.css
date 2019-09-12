@@ -1,13 +1,13 @@
 #cart {
-	position: absolute;
-	top: 100px;
-  	right: 16px;
+	position: fixed;
+	top: 130px;
+  	right: 130px;
   	padding:10px;
   	text-align: :center;
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.5);
     /*transition: 0.3s;*/
     width: 22%;
-    height: 70%;
+    height: 60%;
     /*  float:right;*/
 }
 

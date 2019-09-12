@@ -1,5 +1,5 @@
-<?php include('includes\header.php') ?>
-<?php include('includes\sidebar.php') ?>
+<?php include('Includes/header.php') ?>
+<?php include('Includes/sidebar.php') ?>
 <?php include ('Config/db_config.php'); ?>
 <!DOCTYPE html>
 <html>
@@ -8,6 +8,8 @@
   <link rel="stylesheet" href="CSS/card.css">
   <link rel="stylesheet" href="CSS/button.css">
   <link rel="stylesheet" href="CSS/cart.css">
+
+ 
 </head>
 <body>
 	<div id="maincontent">
@@ -35,10 +37,16 @@
 		}
 		?>	
 
-			<div id="cart">Your Orders</div>
+		<div id="cart">
+			Your Orders
+			<div id="orders">
 			</div>
+			<button id="btn submit">Submit</button>
+		</div>
+	</div>
 
-		<script>
+
+			<script>
 			var na;
 			var iter;
 			function add(element){
@@ -49,14 +57,10 @@
 				var node = document.createElement("p");                 
 				var textnode = document.createTextNode(na);         
 				node.appendChild(textnode);                         
-				document.getElementById("cart").appendChild(node);
+				document.getElementById("orders").appendChild(node);
 			}
-		</script>
+		</script>		
 </body>
 </html>
-<?php
-        
 
-  
-?>
 

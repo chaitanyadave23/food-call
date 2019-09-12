@@ -12,6 +12,16 @@ body {
   height: 57px;
   position:fixed;
   width:100%;
+  z-index: 99;
+
+ /* background: #FF0;
+  height: 60px;
+  left: 0;
+  margin-left: 120px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 99;*/
   
 }
 
