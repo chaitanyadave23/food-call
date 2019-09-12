@@ -20,11 +20,10 @@
   <button type="button" class="btn" data-toggle="modal" data-target="#login">
   	Login
 	</button>
-  <button type="button" class="btn" data-toggle="modal" data-target="#signup">
-    Sign Up
-  </button>
-    <a class ="a" href="#home">Sign Up</a>
-    <a class ="a" href="#home">Sign Up</a>
+  <a href="signup.php"
+    <button type="button" class="btn">Sign Up</button>
+  </a>
+ 
    
   </div>
 </div>

@@ -1,6 +1,18 @@
-<?php include('includes\header.php') ?>
-<?php include('includes\sidebar.php') ?>
-<?php include ('Config/db_config.php'); ?>
+<?php
+session_start();
+
+include('includes\header.php'); 
+include('includes\sidebar.php');
+include('Config/db_config.php');
+
+if(!isset($_SESSION['name'])){
+	header( "Location:http://localhost/food-call/index.php");
+	//echo "sesion is set";
+}
+
+?>
+
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -8,6 +20,14 @@
   <link rel="stylesheet" href="CSS/card.css">
   <link rel="stylesheet" href="CSS/button.css">
   <link rel="stylesheet" href="CSS/cart.css">
+  <style>
+  	#maincontent {
+	  transition: margin-left 0s;
+	  padding: 16px;
+	  margin-left: 165px;
+	  background-color: white;	  
+}
+  </style>
 </head>
 <body>
 	<div id="maincontent">
@@ -54,9 +74,4 @@
 		</script>
 </body>
 </html>
-<?php
-        
-
-  
-?>
 
