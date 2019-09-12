@@ -7,8 +7,8 @@ body {
   width: 165px;
   position: fixed;
   left: 0;
-  top:9%;
-  background-color: #111;
+  top:8.5%;
+  background-color: black;
   overflow-x: hidden;
   transition: 0s;
 }
@@ -31,8 +31,10 @@ body {
   transition: margin-left 0s;
   padding: 16px;
   margin-left: 165px;
-  background-color: white;  
-
+  background-color: white;
+  position: absolute;
+  top: 8.5%;
+  left: 10px;
 }
 
 @media screen and (max-height: 1000px) {

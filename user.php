@@ -1,3 +1,4 @@
+
 <?php
 session_start();
 
@@ -20,6 +21,7 @@ if(!isset($_SESSION['name'])){
   <link rel="stylesheet" href="CSS/card.css">
   <link rel="stylesheet" href="CSS/button.css">
   <link rel="stylesheet" href="CSS/cart.css">
+<<<<<<< HEAD
   <style>
   	#maincontent {
 	  transition: margin-left 0s;
@@ -28,6 +30,10 @@ if(!isset($_SESSION['name'])){
 	  background-color: white;	  
 }
   </style>
+=======
+
+ 
+>>>>>>> cd18aca7d6673daa0639fba531de8da7373b8ca6
 </head>
 <body>
 	<div id="maincontent">
@@ -55,10 +61,16 @@ if(!isset($_SESSION['name'])){
 		}
 		?>	
 
-			<div id="cart">Your Orders</div>
+		<div id="cart">
+			Your Orders
+			<div id="orders">
 			</div>
+			<button id="btn submit">Submit</button>
+		</div>
+	</div>
 
-		<script>
+
+			<script>
 			var na;
 			var iter;
 			function add(element){
@@ -69,9 +81,13 @@ if(!isset($_SESSION['name'])){
 				var node = document.createElement("p");                 
 				var textnode = document.createTextNode(na);         
 				node.appendChild(textnode);                         
-				document.getElementById("cart").appendChild(node);
+				document.getElementById("orders").appendChild(node);
 			}
-		</script>
+		</script>		
 </body>
 </html>
+<<<<<<< HEAD
+=======
+
+>>>>>>> cd18aca7d6673daa0639fba531de8da7373b8ca6
 
