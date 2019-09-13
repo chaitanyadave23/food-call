@@ -7,19 +7,12 @@
 </head>
 
 <body>  
-<script type="text/javascript">
-  $(document).ready(function(){
-     $("#profile_link").click(function(){
-         $("#profile").load("index.php");
-     });
-  });
 
-</script>
 <div id="mySidenav" class="sidenav">
-  <a href="#" id="profile_link">Profile</a>
-  <a href="#">Order History</a>
-  <a href="#">Suggestions</a>
-  <a href="#">Change Credentials</a>
+  <a href="profile.php" id="profile_link">Profile</a>
+  <a href="">Order History</a>
+  <a href="suggesstions.php">Suggestions</a>
+  <a href="ChangeCredentials.php">Change Credentials</a>
   <a href="#">PerDay Average</a>
   <a href="#">User Log</a>
 </div>

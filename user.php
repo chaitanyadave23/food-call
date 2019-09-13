@@ -8,7 +8,7 @@ include('Config/db_config.php');
 
 if(!isset($_SESSION['name'])){
 	header( "Location:http://localhost/food-call/index.php");
-	//echo "sesion is set";
+	echo "sesion is set";
 }
 
 ?>
@@ -21,19 +21,7 @@ if(!isset($_SESSION['name'])){
   <link rel="stylesheet" href="CSS/card.css">
   <link rel="stylesheet" href="CSS/button.css">
   <link rel="stylesheet" href="CSS/cart.css">
-<<<<<<< HEAD
-  <style>
-  	#maincontent {
-	  transition: margin-left 0s;
-	  padding: 16px;
-	  margin-left: 165px;
-	  background-color: white;	  
-}
-  </style>
-=======
 
- 
->>>>>>> cd18aca7d6673daa0639fba531de8da7373b8ca6
 </head>
 <body>
 	<div id="maincontent">
@@ -86,8 +74,3 @@ if(!isset($_SESSION['name'])){
 		</script>		
 </body>
 </html>
-<<<<<<< HEAD
-=======
-
->>>>>>> cd18aca7d6673daa0639fba531de8da7373b8ca6
-

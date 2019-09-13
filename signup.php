@@ -1,102 +1,174 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<title>Signup</title>
-	<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-	<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
-	<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-	<!------ Include the above in your HEAD tag ---------->
 
-	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/all.css">
-	<link rel="stylesheet" href="CSS\signup.css">
+<?php include('Config/db_config.php'); ?>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Register Here!</title>
+    <link rel="stylesheet" href="CSS/card.css">
+    <link rel="stylesheet" href="CSS/button.css">
+    <link rel="stylesheet" href="CSS/cart.css">
+
+    <!-- Required meta tags-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Colorlib Templates">
+    <meta name="author" content="Colorlib">
+    <meta name="keywords" content="Colorlib Templates">
+
+    <!-- Title Page-->
+    <title>Profile</title>
+
+    <!-- Icons font CSS-->
+    <link href="vendor/mdi-font/css/material-design-iconic-font.min.css" rel="stylesheet" media="all">
+    <link href="vendor/font-awesome-4.7/css/font-awesome.min.css" rel="stylesheet" media="all">
+    <!-- Font special for pages-->
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+
+    <!-- Vendor CSS-->
+    <link href="vendor/select2/select2.min.css" rel="stylesheet" media="all">
+    <link href="vendor/datepicker/daterangepicker.css" rel="stylesheet" media="all">
+
+    <!-- Main CSS-->
+    <link href="CSS/main.css" rel="stylesheet" media="all">
 
 </head>
 <body>
-
-<div class="container">
-<br> 
-
-<div class="card bg-light">
-<article class="card-body mx-auto" style="max-width: 400px;">
-	<h4 class="card-title mt-3 text-center">Create Account</h4>
-	<p class="text-center">Get started with your free account</p>
-	<p>
-		<a href="" class="btn btn-block btn-twitter"> <i class="fab fa-twitter"></i>   Login via Twitter</a>
-		<a href="" class="btn btn-block btn-facebook"> <i class="fab fa-facebook-f"></i>   Login via facebook</a>
-	</p>
-	<p class="divider-text">
-        <span class="bg-light">OR</span>
-    </p>
-	<form action="" method="post">
-	<div class="form-group input-group">
-		<div class="input-group-prepend">
-		    <span class="input-group-text"> <i class="fa fa-user"></i> </span>
-		 </div>
-        <input name="" class="form-control" placeholder="Full name" type="text">
-    </div> <!-- form-group// -->
     
-    <div class="form-group input-group">
-    	<div class="input-group-prepend">
-		    <span class="input-group-text"> <i class="fa fa-"></i> </span>
-		</div>
-		
-    	<input name="" class="form-control" placeholder="Reg.no" type="text">
-    </div> <!-- form-group// -->
-<div class="form-group input-group">
-    	<div class="input-group-prepend">
-		    <span class="input-group-text"> <i class="fa fa-envelope"></i> </span>
-		 </div>
-        <input name="email" class="form-control" placeholder="Email address" type="email">
-    </div> <!-- form-group// -->
+                <div class="card card-4" style="width: fit-content; margin:10px;position: relative;left: 300px;">
+                    <div class="card-body">
+                        <h2 class="title">Registration Form</h2>
+                        <form method="POST">
+                            <div class="row row-space">
+                                <div class="col-2">
+                                    <div class="input-group">
+                                        <label class="label">Name</label>
+                                        <input class="input--style-4" type="text" name="name">
+                                    </div>
+                                </div>
+                                <div class="col-2">
+                                    <div class="input-group">
+                                        <label class="label">Reg.No</label>
+                                        <input class="input--style-4" type="text" name="regno">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row row-space">
+                                <div class="col-2">
+                                    <div class="input-group">
+                                        <label class="label">Birthday</label>
+                                        <div class="input-group-icon">
+                                            <input class="input--style-4 js-datepicker" type="text" name="dob">
+                                            <i class="zmdi zmdi-calendar-note input-icon js-btn-calendar"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-2">
+                                    <div class="input-group">
+                                        <label class="label">Gender</label>
+                                        <div class="p-t-10">
+                                            <label class="radio-container m-r-45">Male
+                                                <input type="radio" checked="checked" name="gender">
+                                                <span class="checkmark"></span>
+                                            </label>
+                                            <label class="radio-container">Female
+                                                <input type="radio" name="gender">
+                                                <span class="checkmark"></span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row row-space">
+                                <div class="col-2">
+                                    <div class="input-group">
+                                        <label class="label">Email</label>
+                                        <input class="input--style-4" type="email" name="email">
+                                    </div>
+                                </div>
+                                <div class="col-2">
+                                    <div class="input-group">
+                                        <label class="label">Phone Number</label>
+                                        <input class="input--style-4" type="text" name="phno">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row row-space">
+                                <div class="col-2">
+                                    <div class="input-group">
+                                        <label class="label">Password</label>
+                                        <input class="input--style-4" type="Password" name="pass">
+                                    </div>
+                                </div>
+                                <div class="col-2">
+                                    <div class="input-group">
+                                        <label class="label">Confirm Password</label>
+                                        <input class="input--style-4" type="Password" name="confrmpass">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="p-t-15">
+                                <button class="btn btn--radius-2 btn--blue" name="signup" type="submit">Submit</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
 
-     <div class="form-group input-group">
-    	<div class="input-group-prepend">
-		    <span class="input-group-text"> <i class="fa fa-phone"></i> </span>
-		</div>
-		
-    	<input name="" class="form-control" placeholder="Phone number" type="text">
-    </div> <!-- form-group// -->
 
+    <!-- Jquery JS-->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <!-- Vendor JS-->
+    <script src="vendor/select2/select2.min.js"></script>
+    <script src="vendor/datepicker/moment.min.js"></script>
+    <script src="vendor/datepicker/daterangepicker.js"></script>
 
-
-   
-    <div class="form-group input-group">
-    	<div class="input-group-prepend">
-		    <span class="input-group-text"> <i class="fa fa-lock"></i> </span>
-		</div>
-        <input class="form-control" placeholder="Create password" type="password">
-    </div> <!-- form-group// -->
-    <div class="form-group input-group">
-    	<div class="input-group-prepend">
-		    <span class="input-group-text"> <i class="fa fa-lock"></i> </span>
-		</div>
-        <input class="form-control" placeholder="Repeat password" type="password">
-    </div> <!-- form-group// -->                                      
-    <div class="form-group">
-        <button type="submit" name="signup" class="btn btn-primary btn-block" data-toggle="modal" data-target=".bd-example-modal-lg"> Create Account  </button>
-        <button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bd-example-modal-lg">Large modal</button>
-    </div> <!-- form-group// -->      
-    <p class="text-center">Have an account? <a href="index.php">Log In</a> </p>                                                                 
-</form>
-</article>
-</div> <!-- card.// -->
-
-</div> 
-<!--container end.//-->
-
-<br><br>
-</article>
-<!-- Large modal -->
-<div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
-  <div class="modal-dialog modal-lg">
-    <div class="modal-content">
-      hello
-    </div>
-  </div>
-</div>
+    <!-- Main JS-->
+    <script src="JS/global.js"></script>
 
 </body>
 </html>
+<?php
 
+
+if(isset($_POST['signup'])){
+  
+  $name = $_POST['name'];
+  $regno = $_POST['regno'];
+  $dob = $_POST['dob'];
+  $gender = $_POST['gender'];
+  $email = $_POST['email'];
+  $phno = $_POST['phno'];
+  $pass = $_POST['pass'];
+  $confrmpass = $_POST['confrmpass'];
+
+
+  $query = "select * from login where email_id='$email'";
+  $num = mysqli_query($con,$query);
+   if(mysqli_num_rows($num)>0)
+    {
+        echo '<script type="text/javascript">alert("This Student already exsists pls try again !")</script>';
+    }
+    else
+    {     
+        $query = "insert into login values('$regno','$name','$email','$pass','$phno','$gender','$dob','','');";
+        $query_run = mysqli_query($con,$query);                            
+        if($query_run)
+        {
+            echo '<script type="text/javascript">alert("User Registered.. Welcome")</script>';
+        }
+        else
+        {
+            echo '<script type="text/javascript">alert("Error occured")</script>'; 
+        }
+    }                    
+  }
+
+
+
+
+
+?>
 <?php include('Includes\send_mail.php'); ?>
 <?php //include('Includes\send_otp.php'); ?>
