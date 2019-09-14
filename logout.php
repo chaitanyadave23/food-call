@@ -5,5 +5,5 @@ if(isset($_SESSION['name'])){
   header("Location:http://localhost/food-call/index.php");
 }
 else header("Location:http://localhost/food-call/index.php");
-//hello
+
 ?>
