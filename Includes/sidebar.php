@@ -9,6 +9,7 @@
 <body>  
 
 <div id="mySidenav" class="sidenav">
+  <a href="user.php" id="profile_link">Order Food</a>
   <a href="profile.php" id="profile_link">Profile</a>
   <a href="">Order History</a>
   <a href="suggesstions.php">Suggestions</a>

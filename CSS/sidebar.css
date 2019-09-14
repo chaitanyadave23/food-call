@@ -11,6 +11,7 @@ body {
   background-color: black;
   overflow-x: hidden;
   transition: 0s;
+  padding-top: 25px;
 }
 
 .sidenav a {

@@ -21,6 +21,7 @@ if(!isset($_SESSION['name'])){
   <link rel="stylesheet" href="CSS/card.css">
   <link rel="stylesheet" href="CSS/button.css">
   <link rel="stylesheet" href="CSS/cart.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
 </head>
 <body>
@@ -52,25 +53,57 @@ if(!isset($_SESSION['name'])){
 		<div id="cart">
 			Your Orders
 			<div id="orders">
+				
 			</div>
-			<button id="btn submit">Submit</button>
+			
 		</div>
+		<div id="placeorder">
+			<button type="submit" id="placeorder" class="btn btn-outline-success btn-lg btn-block">Place Order</button>
+		</div>
+		
+			
+		
 	</div>
+	<script>
+	var na;
+	var iter;
+	function add(element){
+		iter=element.value;
+		na = document.getElementById(iter).textContent;
+		// document.getElementById("cart").innerHTML=na;
+
+		var node = document.createElement("p");                 
+		var textnode = document.createTextNode(na);         
+		node.appendChild(textnode);                         
+		document.getElementById("orders").appendChild(node);
+	}
 
 
-			<script>
-			var na;
-			var iter;
-			function add(element){
-				iter=element.value;
-				na = document.getElementById(iter).textContent;
-				// document.getElementById("cart").innerHTML=na;
+	/*$(function (){
 
-				var node = document.createElement("p");                 
-				var textnode = document.createTextNode(na);         
-				node.appendChild(textnode);                         
-				document.getElementById("orders").appendChild(node);
+		$('#placeorder').on('click',function() {
+			var order = {
+				name: "hello";
+				price="100";
+
 			}
-		</script>		
+			$.ajax({
+				type:'POST',
+				url: 'addOrder.php',
+				data:order,
+				success: function(){
+
+				}
+
+			});
+		});
+
+		
+	});*/
+	</script>	
+
+	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 </body>
 </html>
