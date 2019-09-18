@@ -9,12 +9,11 @@
 <body>  
 
 <div id="mySidenav" class="sidenav">
-  <a href="#">Edit Menu</a>
-  <a href="#">Complaints</a>
-  <a href="#">Registered Students</a>
-  <a href="#">Remove Students</a>
-  <a href="#">Add Students</a>
-  <a href="#">Total Day Revenue</a>
+  <a href="editmenu.php">Edit Menu</a>
+  <a href="admincomplaints.php">Complaints</a>
+  <a href="RegisteredStudents.php">Registered Students</a>
+  <a href="Edit_Students.php">Remove or Add Students</a>
+  <a href="#">Recharge</a>
 </div>
 <script>
 

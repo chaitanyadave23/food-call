@@ -1,10 +1,27 @@
-
+<?php
+include('includes\header.php'); 
+include('includes\adminsidebar.php');
+include('Config/db_config.php');
+?>
 <html>  
     <head>  
         <title>Edit Menu</title>  
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />  
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>  
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>  
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script> 
+
+        <style>
+            .container{
+                transition: margin-left 0s;
+                padding: 16px;
+                margin-left: 165px;
+                background-color: white;
+                position: absolute;
+                top: 8.5%;
+                left: 10px;
+            }
+        </style>
+
     </head>  
     <body>  
         <div class="container">  

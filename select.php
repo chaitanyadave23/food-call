@@ -5,11 +5,11 @@
  $result = mysqli_query($connect, $sql);  
  $output .= '  
       <div class="table-responsive">  
-           <table class="table table-bordered">  
+           <table class="table table-striped">  
                 <tr>  
-                     <th width="10%">Id</th>  
-                     <th width="40%">Name</th>  
-                     <th width="40%">Price</th>  
+                     <th width="5%">Id</th>  
+                     <th width="30%">Name</th>  
+                     <th width="20%">Price</th>  
                      <th width="10%">Delete</th>  
                 </tr>';  
  $rows = mysqli_num_rows($result);
