@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="CSS/card.css">
     <link rel="stylesheet" href="CSS/button.css">
     <link rel="stylesheet" href="CSS/cart.css">
+     <link rel="stylesheet" href="CSS/signup.css">
 
     <!-- Required meta tags-->
     <meta charset="UTF-8">
@@ -34,10 +35,11 @@
 
 </head>
 <body>
-    
-                <div class="card card-4" style="width: fit-content; margin:10px;position: relative;left: 300px;">
+            <div class="signup">
+                <div class="formpos">
+                <div class="card card-4" style="width: 75%; margin:10px; position: relative; left: 300px;">
                     <div class="card-body">
-                        <h2 class="title">Registration Form</h2>
+                        <h2 class="title">Registration Here !</h2>
                         <form method="POST">
                             <div class="row row-space">
                                 <div class="col-2">
@@ -113,9 +115,13 @@
                         </form>
                     </div>
                 </div>
-            </div>
-        </div>
+           </div>
+       </div>
+           <div class="sideimage">
+            <img src="Images\chef.jpg" style="width: 100%; height: 100%;">
 
+
+           </div>           
 
     <!-- Jquery JS-->
     <script src="vendor/jquery/jquery.min.js"></script>
@@ -164,10 +170,6 @@ if(isset($_POST['signup'])){
         }
     }                    
   }
-
-
-
-
 
 ?>
 <?php include('Includes\send_mail.php'); ?>

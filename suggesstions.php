@@ -71,7 +71,7 @@ if(isset($_POST['submit'])){
                             <div class="row row-space">
                                 <div class="col-2">
                                     <div class="input-group">
-                                        <textarea style="height: 150px; width: 220%;"class="input--style-4" type="text" rows="5" name="sugges"></textarea>
+                                        <textarea style="height: 150px; width: 220%; position: relative; left: -100px;"class="input--style-4" type="text" rows="5" name="sugges"></textarea>
                                     </div>
                                 </div>
                             </div>

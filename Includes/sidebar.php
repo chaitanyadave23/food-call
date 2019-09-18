@@ -19,11 +19,11 @@
   <a href="suggesstions.php"><i class='fas fa-file-alt'></i>&nbsp;&nbsp;Suggestions</a>
   <a href="ChangeCredentials.php"><span class="glyphicon glyphicon-edit"></span>&nbsp;&nbsp;Change Credentials</a>
   <a href="#"><span class="glyphicon glyphicon-stats"></span>&nbsp;&nbsp;PerDay Average</a>
-  <a href="userlog.php">User Log</a>
+ 
 </div>
 <script>
 
-  
+
 function openNav() {
   if(document.getElementById("mySidenav").style.width == "165px")
   {
