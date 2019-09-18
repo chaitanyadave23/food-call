@@ -40,7 +40,7 @@
                 <div class="card card-4" style="width: 75%; margin:10px; position: relative; left: 300px;">
                     <div class="card-body">
                         <h2 class="title">OTP has been sent to your registered email ID and Phone Number. Please verify your account by entering the OTP below. !</h2>
-                        <form method="POST">
+                        <form method="POST" action="">
                             <div class="row row-space">
                                 <div class="col-6">
                                     <div class="input-group">
@@ -63,7 +63,7 @@
                             </div>
                             
                             <div class="p-t-15">
-                                <button class="btn btn--radius-2 btn--blue" name="signup" type="submit">Submit</button>
+                                <button class="btn btn--radius-2 btn--blue" name="checkotp" type="submit">Verify OTP</button>
                             </div>
                         </form>
                     </div>
@@ -72,8 +72,6 @@
        </div>
            <div class="sideimage">
             <img src="Images\chef.jpg" style="width: 100%; height: 100%;">
-
-
            </div>           
 
     <!-- Jquery JS-->
@@ -91,39 +89,53 @@
 <?php
 
 
-if(isset($_POST['signup'])){
-  
-  $name = $_POST['name'];
-  $regno = $_POST['regno'];
-  $dob = $_POST['dob'];
-  $gender = $_POST['gender'];
-  $email = $_POST['email'];
-  $phno = $_POST['phno'];
-  $pass = $_POST['pass'];
-  $confrmpass = $_POST['confrmpass'];
+if(isset($_POST['checkotp'])){
+    if(isset($_COOKIE['otp']))
+        echo $_COOKIE['otp'];
+    setcookie('otp','567765');
+    echo $_COOKIE['otp'];
+/*
+    $emailotp=$_POST['emailotp'];
+    $mobileotp=$_POST['mobileotp'];
+
+    if($emailotp==$_COOKIE['otp'] && $mobileotp==$_COOKIE['otp']){
+
+        $name = $_POST['name'];
+        $regno = $_POST['regno'];
+        $dob = $_POST['dob'];
+        $gender = $_POST['gender'];
+        $email = $_POST['email'];
+        $phno = $_POST['phno'];
+        $pass = $_POST['pass'];
+        $confrmpass = $_POST['confrmpass'];
 
 
-  $query = "select * from login where email_id='$email'";
-  $num = mysqli_query($con,$query);
-   if(mysqli_num_rows($num)>0)
-    {
-        echo '<script type="text/javascript">alert("This Student already exsists pls try again !")</script>';
-    }
-    else
-    {     
-        $query = "insert into login values('$regno','$name','$email','$pass','$phno','$gender','$dob','','');";
-        $query_run = mysqli_query($con,$query);                            
-        if($query_run)
-        {
-            echo '<script type="text/javascript">alert("User Registered.. Welcome")</script>';
-        }
+        $query = "select * from login where email_id='$email'";
+        $num = mysqli_query($con,$query);
+        if(mysqli_num_rows($num)>0)
+            {
+                echo '<script type="text/javascript">alert("This Student already exsists pls try again !")</script>';
+            }
         else
-        {
-            echo '<script type="text/javascript">alert("Error occured")</script>'; 
-        }
-    }                    
-  }
+        {     
+            $query = "insert into login values('$regno','$name','$email','$pass','$phno','$gender','$dob','','');";
+            $query_run = mysqli_query($con,$query);                            
+            if($query_run)
+            {
+                echo '<script type="text/javascript">alert("Registered Sucessfully!..")</script>';
+            }
+            else
+            {
+                echo '<script type="text/javascript">alert("Error occured")</script>'; 
+            }
+        }         
+    }
+    
+    else{
+        echo '<script type="text/javascript">alert("Wrong OTP. Please try again!..")</script>'; 
+    }*/            
 
+
+}
 ?>
-<?php include('Includes\send_mail.php'); ?>
-<?php //include('Includes\send_otp.php'); ?>
+

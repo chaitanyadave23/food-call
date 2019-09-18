@@ -135,42 +135,5 @@
 
 </body>
 </html>
-<?php
-
-
-if(isset($_POST['signup'])){
-  
-  $name = $_POST['name'];
-  $regno = $_POST['regno'];
-  $dob = $_POST['dob'];
-  $gender = $_POST['gender'];
-  $email = $_POST['email'];
-  $phno = $_POST['phno'];
-  $pass = $_POST['pass'];
-  $confrmpass = $_POST['confrmpass'];
-
-
-  $query = "select * from login where email_id='$email'";
-  $num = mysqli_query($con,$query);
-   if(mysqli_num_rows($num)>0)
-    {
-        echo '<script type="text/javascript">alert("This Student already exsists pls try again !")</script>';
-    }
-    else
-    {     
-        $query = "insert into login values('$regno','$name','$email','$pass','$phno','$gender','$dob','','');";
-        $query_run = mysqli_query($con,$query);                            
-        if($query_run)
-        {
-            echo '<script type="text/javascript">alert("User Registered.. Welcome")</script>';
-        }
-        else
-        {
-            echo '<script type="text/javascript">alert("Error occured")</script>'; 
-        }
-    }                    
-  }
-
-?>
 <?php include('Includes\send_mail.php'); ?>
 <?php //include('Includes\send_otp.php'); ?>

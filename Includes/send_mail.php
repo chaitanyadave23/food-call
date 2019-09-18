@@ -18,9 +18,9 @@ if(isset($_POST['signup'])){
   $mail->setFrom('chaitanyadave23@gmail.com', 'Chaitanya');
   $mail->addAddress($_POST['email']);   // Add a recipient
   $mail->isHTML(true);
-  $url = "http://localhost/test5/register2.php/ ".md5( rand(0,1000) );
 
   $otp=mt_rand(100000,999999);                                 
+  setcookie('otp',$otp);
   $mail->Subject = 'Food Call Verification Email';
   $mail->Body = "<div class='container'>
     <div class='alert alert-success' role='alert'>
@@ -35,8 +35,9 @@ if(isset($_POST['signup'])){
       echo 'Message could not be sent.';
       echo 'Mailer Error: ' . $mail->ErrorInfo;
   } else {
-       echo '<script type="text/javascript">alert("A link has been sent to your email accout. Please Click on the link to activate your account!")</script>';
-       
+       echo "<script>
+          window.location = 'http://localhost/food-call/verification.php';      
+       </script>";
   }
 }
 
