@@ -8,11 +8,9 @@ include('Config/db_config.php');
 
 if(!isset($_SESSION['name'])){
 	header( "Location:http://localhost/food-call/index.php");
-	echo "sesion is set";
 }
 
 ?>
-
 
 <!DOCTYPE html>
 <html>

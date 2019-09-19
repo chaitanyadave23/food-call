@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="CSS/card.css">
     <link rel="stylesheet" href="CSS/button.css">
     <link rel="stylesheet" href="CSS/cart.css">
+     <link rel="stylesheet" href="CSS/signup.css">
 
     <!-- Required meta tags-->
     <meta charset="UTF-8">
@@ -34,10 +35,11 @@
 
 </head>
 <body>
-    
-                <div class="card card-4" style="width: fit-content; margin:10px;position: relative;left: 300px;">
+            <div class="signup">
+                <div class="formpos">
+                <div class="card card-4" style="width: 75%; margin:10px; position: relative; left: 300px;">
                     <div class="card-body">
-                        <h2 class="title">Registration Form</h2>
+                        <h2 class="title">Registration Here !</h2>
                         <form method="POST">
                             <div class="row row-space">
                                 <div class="col-2">
@@ -113,9 +115,13 @@
                         </form>
                     </div>
                 </div>
-            </div>
-        </div>
+           </div>
+       </div>
+           <div class="sideimage">
+            <img src="Images\chef.jpg" style="width: 100%; height: 100%;">
 
+
+           </div>           
 
     <!-- Jquery JS-->
     <script src="vendor/jquery/jquery.min.js"></script>
@@ -129,46 +135,5 @@
 
 </body>
 </html>
-<?php
-
-
-if(isset($_POST['signup'])){
-  
-  $name = $_POST['name'];
-  $regno = $_POST['regno'];
-  $dob = $_POST['dob'];
-  $gender = $_POST['gender'];
-  $email = $_POST['email'];
-  $phno = $_POST['phno'];
-  $pass = $_POST['pass'];
-  $confrmpass = $_POST['confrmpass'];
-
-
-  $query = "select * from login where email_id='$email'";
-  $num = mysqli_query($con,$query);
-   if(mysqli_num_rows($num)>0)
-    {
-        echo '<script type="text/javascript">alert("This Student already exsists pls try again !")</script>';
-    }
-    else
-    {     
-        $query = "insert into login values('$regno','$name','$email','$pass','$phno','$gender','$dob','','');";
-        $query_run = mysqli_query($con,$query);                            
-        if($query_run)
-        {
-            echo '<script type="text/javascript">alert("User Registered.. Welcome")</script>';
-        }
-        else
-        {
-            echo '<script type="text/javascript">alert("Error occured")</script>'; 
-        }
-    }                    
-  }
-
-
-
-
-
-?>
 <?php include('Includes\send_mail.php'); ?>
 <?php //include('Includes\send_otp.php'); ?>

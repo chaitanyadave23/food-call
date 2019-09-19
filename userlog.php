@@ -64,25 +64,7 @@ if(isset($_POST['submit'])){
 </head>
 <body>
     <div id="maincontent">
-                <div class="card card-4" style="width: 500px; margin:10px;position: relative;left: 300px;">
-                    <div class="card-body">
-                        <h2 class="title">Please give your Suggestions Below !</h2>
-                        <form method="POST">
-                            <div class="row row-space">
-                                <div class="col-2">
-                                    <div class="input-group">
-                                        <textarea style="height: 150px; width: 220%; position: relative; left: -100px;"class="input--style-4" type="text" rows="5" name="sugges"></textarea>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="p-t-15">
-                                <button class="btn btn--radius-2 btn--blue" name="submit" type="submit">Submit</button>
-                            </div>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </div>
+        
     </div>
 
     <!-- Jquery JS-->
@@ -96,4 +78,3 @@ if(isset($_POST['submit'])){
     <script src="js/global.js"></script>
 
 </body>
-</html>

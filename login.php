@@ -15,7 +15,7 @@ session_start();
           { 
             $row = mysqli_fetch_array($query_run,MYSQLI_ASSOC);
             $_SESSION['name'] = $username;  
-            echo "hello";
+            
 
             header( "Location:http://localhost/food-call/user.php");
           }
