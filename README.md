@@ -7,3 +7,12 @@ SMS notifications to the user about the itinerary status.
 - Used PHP for providing back-end and Bootstrap,HTML for front-end
 
 ## Screenshots
+![](Images/Login.png)
+![](Images/Registration.png)
+![](Images/OrderFood.png)
+![](Images/OrderDetails.png)
+![](Images/EditMenu.png)
+![](Images/Suggestions.png)
+![](Images/OTPVerification.png)
+![](Images/OTPThroughMail.png)
+
